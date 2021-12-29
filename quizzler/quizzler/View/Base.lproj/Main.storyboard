@@ -27,6 +27,18 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yvb-tH-cXp">
                                                 <rect key="frame" x="0.0" y="88.5" width="414" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3b-cP-h0G">
+                                                        <rect key="frame" x="8" y="8" width="41.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="U3b-cP-h0G" firstAttribute="top" secondItem="Yvb-tH-cXp" secondAttribute="top" constant="8" id="CNO-Np-9k1"/>
+                                                    <constraint firstItem="U3b-cP-h0G" firstAttribute="leading" secondItem="Yvb-tH-cXp" secondAttribute="leading" constant="8" id="JA6-QG-AGb"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lej-jt-Au3">
                                                 <rect key="frame" x="0.0" y="176.5" width="414" height="81.5"/>
@@ -186,6 +198,7 @@
                         <outlet property="falseButton" destination="ALk-gs-5sC" id="6WO-ii-7WA"/>
                         <outlet property="progressBar" destination="1ez-8M-Jjp" id="EJ5-an-eIb"/>
                         <outlet property="quizLabel" destination="hX4-0f-CSq" id="qnU-vQ-VuV"/>
+                        <outlet property="scoreLabel" destination="U3b-cP-h0G" id="fY5-Zj-SPq"/>
                         <outlet property="trueButton" destination="k8y-p8-rH7" id="0Yt-Ok-c1l"/>
                     </connections>
                 </viewController>
