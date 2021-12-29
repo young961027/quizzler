@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         Question(text: "Five - Two is greater than One", answer: "True"),
         Question(text: "Three + Eight is less than Ten", answer: "False")
     ]
+    var timer = Timer()
     var questionNumber = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +32,9 @@ class ViewController: UIViewController {
         let actualAnswer = quiz[questionNumber].answer
         
         if userAnswer == actualAnswer {
-            print("Correct!")
+            sender.backgroundColor = UIColor.green
         } else {
-            print("Wrong!")
+            sender.backgroundColor = UIColor.red
         }
         
         if questionNumber < 2 {
@@ -41,11 +42,15 @@ class ViewController: UIViewController {
         } else {
             questionNumber = 0
         }
-        updateUI()
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
-    func updateUI() {
+    @objc func updateUI() {
+        timer.invalidate()
         quizLabel.text = quiz[questionNumber].text
+        trueButton.backgroundColor = UIColor.systemIndigo
+        falseButton.backgroundColor = UIColor.systemIndigo
+        progressBar.progress = Float(questionNumber + 1) / Float(quiz.count)
     }
 }
 
